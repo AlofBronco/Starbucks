@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+
+  margin-bottom: 40px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.07);
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+
+  padding-left: 20px;
+  padding-right: 35px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#sections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  margin-right: 35px;
+
+  cursor: pointer;
+}
+
+#sections > span {
+  font-weight: bold;
+  font-size: 1.1rem;
+
+  margin-right: 20px;
+
+  cursor: pointer;
+}
+
+#sections > span:hover {
+  color: rgb(0, 117, 74);
+}
+
+#account-buttons {
+  display: flex;
+}
+
+#account-buttons > button {
+  border-radius: 50px;
+  border: 1px solid black;
+
+  font-weight: 600;
+
+  padding: 7px 16px;
+
+  background: none;
+
+  cursor: pointer;
+
+  transition: background-color 0.1s ease-in;
+}
+
+#account-buttons > #sign-in {
+  margin-right: 10px;
+}
+
+#account-buttons > #sign-in:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+#account-buttons > #join-now {
+  color: white;
+  background-color: black;
+}
+
+#account-buttons > #join-now:hover {
+  background-color: rgb(89, 89, 89);
+}
+
+#location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 45px;
+
+  cursor: pointer;
+}
+
+#location:hover {
+  color: rgb(0, 117, 74);
+}
+
+#location > span {
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  width: 85%;
+  height: 600px;
+
+  margin-bottom: 30px;
+
+  color: white;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-1 {
+  background-color: rgb(0, 98, 65);
+
+  flex-direction: row-reverse;
+}
+
+.img-coffee {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  flex: 1;
+}
+
+.card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.card-text > h1,
+.card-text > h2 {
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.card-text > h1 {
+  font-size: 3rem;
+}
+
+.card-text > h2 {
+  width: 73%;
+
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.card-text > button {
+  background: none;
+
+  padding: 10px 20px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+
+  border: 1px solid white;
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  transition: background-color 0.1s ease-in;
+}
+
+.card-text > button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#card-2 {
+  background-color: rgb(158, 34, 64);
+}
+
+#card-3 {
+  height: 420px;
+
+  background-color: rgb(0, 98, 65);
+
+  flex-direction: row-reverse;
+}
+
+.special-card > h1 {
+  font-size: 2.2rem;
+}
+
+.special-card > h2 {
+  font-size: 1.2rem;
+
+  line-height: 1.8;
+}
+
+.special-card > button {
+  padding: 8px 14px;
+
+  font-size: 1rem;
+}
+
+#card-4 {
+  background-color: rgb(0, 113, 121);
+}
+
+#card-5 {
+  background-color: rgb(255, 190, 158);
+
+  flex-direction: row-reverse;
+}
+
+.text-special > h1 {
+  width: 70%;
+}
+
+.text-special,
+.text-special > button {
+  color: rgb(30, 57, 50);
+}
+
+.text-special > button {
+  border-color: rgb(30, 57, 50);
+}
+
+#card-6 {
+  height: 420px;
+
+  margin-bottom: 50px;
+
+  background-color: rgb(242, 240, 235);
+}
+
+article {
+  width: 35%;
+
+  font-size: 0.9rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+#site-link {
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
+#site-link:hover {
+  text-decoration: none;
+}
+
+article > p {
+  margin-bottom: 70px;
+}
+
+article > :nth-child(1) {
+  margin-bottom: 30px;
+}
+
+footer {
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 -2px 2px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.07);
+
+  display: flex;
+  flex-direction: column;
+}
+
+#footer-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#info {
+  display: flex;
+  align-items: baseline;
+
+  width: 85%;
+
+  margin: 30px 0px;
+
+  gap: 30px;
+}
+
+.info-box > h3 {
+  font-weight: 400;
+  font-size: 1.3rem;
+
+  margin-bottom: 40px;
+}
+
+.unordered-list,
+#additional-info > ul {
+  list-style-type: none;
+}
+
+.unordered-list {
+  width: 200px;
+}
+
+.unordered-list > li {
+  margin-bottom: 25px;
+
+  font-size: 1.1rem;
+
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+}
+
+.unordered-list > li:hover {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+hr {
+  height: 2px;
+  width: 85%;
+
+  margin-bottom: 30px;
+
+  background-color: rgba(0, 0, 0, 0.1);
+
+  border: none;
+}
+
+#social-media,
+#additional-info,
+#copyright {
+  width: 85%;
+
+  display: flex;
+  align-items: center;
+}
+
+#social-media {
+  margin-bottom: 30px;
+
+  gap: 15px;
+}
+
+.svg-circle > svg {
+  cursor: pointer;
+}
+
+.svg-circle::after {
+  content: '';
+
+  width: 32px;
+  height: 32px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background-color: rgba(211, 211, 211, 0.5);
+
+  z-index: -1;
+}
+
+.svg-circle::after:hover {
+  width: 42px;
+  height: 42px;
+}
+
+#additional-info > ul > li {
+  margin-bottom: 25px;
+
+  cursor: pointer;
+}
+
+#additional-info > ul > li:hover {
+  text-decoration: underline;
+}
+
+#additional-info > ul > li:nth-last-child(1) {
+  margin-bottom: 30px;
+}
+
+#copyright,
+.unordered-list > li {
+  color: rgba(0, 0, 0, 0.58);
+}
+
+#copyright {
+  margin-bottom: 35px;
+
+  font-size: 0.8rem;
+}
