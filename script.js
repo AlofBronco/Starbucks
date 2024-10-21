@@ -9,6 +9,6 @@ document.querySelectorAll('.info-box-inner').forEach((infoBox) => {
     }
 
     const arrowSvg = this.querySelector('.arrow');
-    arrowSvg.classList.add('flip');
+    arrowSvg.classList.toggle('flip');
   });
 });

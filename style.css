@@ -366,6 +366,7 @@ hr {
 
 .svg-circle {
   position: relative;
+  z-index: 2;
 }
 
 .svg-circle::after {
@@ -518,18 +519,11 @@ hr {
 
   .arrow {
     display: block;
+    transition: transform 0.5s;
   }
 
   .flip {
-    animation: flip 0.5s;
-  }
-
-  @keyframes flip {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(180deg);
-    }
+    transform: rotate(180deg);
+    transition: transform 0.5s;
   }
 }
