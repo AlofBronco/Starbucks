@@ -11,9 +11,12 @@ header {
   width: 100%;
   height: 100px;
 
-  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
 
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.07);
+  background-color: #fff;
+
+  margin-bottom: 40px;
 }
 
 nav {
@@ -23,9 +26,14 @@ nav {
   padding-left: 20px;
   padding-right: 35px;
 
+  position: relative;
+  z-index: 2;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.07);
 }
 
 #sections {
@@ -57,7 +65,8 @@ nav {
   display: flex;
 }
 
-#account-buttons > button {
+#account-buttons > button,
+#slide-in-account > button {
   border-radius: 50px;
   border: 1px solid black;
 
@@ -65,27 +74,26 @@ nav {
 
   padding: 7px 16px;
 
-  background: none;
-
   cursor: pointer;
 
   transition: background-color 0.1s ease-in;
 }
 
-#account-buttons > #sign-in {
+.sign-in {
   margin-right: 10px;
+  background-color: #fff;
 }
 
-#account-buttons > #sign-in:hover {
+.sign-in:hover {
   background-color: rgb(220, 220, 220);
 }
 
-#account-buttons > #join-now {
+.join-now {
   color: white;
   background-color: black;
 }
 
-#account-buttons > #join-now:hover {
+.join-now:hover {
   background-color: rgb(89, 89, 89);
 }
 
@@ -118,6 +126,22 @@ main {
   flex-direction: column;
 }
 
+#overlay {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: none;
+  opacity: 0;
+
+  transition: opacity 0.2s ease-in;
+}
+
 .card {
   max-width: 1440px;
 
@@ -143,8 +167,6 @@ main {
   height: 100%;
 
   object-fit: cover;
-
-  flex: 1;
 }
 
 .card-text {
@@ -152,9 +174,16 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  flex: 1;
 }
+
+/* BUGFIX FOR CHROME */
+.card-text,
+.img-coffee {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+/* BUGFIX FOR CHROME */
 
 .card-text > h1,
 .card-text > h2 {
@@ -188,7 +217,7 @@ main {
 
   cursor: pointer;
 
-  transition: background-color 0.1s ease-in, scale 0.1s ease-in;
+  transition: background-color 0.1s ease-in, transform 0.1s ease-in;
 }
 
 .card-text > button:hover {
@@ -196,7 +225,7 @@ main {
 }
 
 .card-text > button:active {
-  scale: 0.95;
+  transform: scale(0.95);
 }
 
 #card-2 {
@@ -436,6 +465,10 @@ hr {
   font-size: 0.8rem;
 }
 
+#slide-in-menu {
+  display: none;
+}
+
 @media screen and (max-width: 1520px) {
   #social-media,
   #additional-info,
@@ -553,15 +586,19 @@ hr {
   #burger-button {
     border: none;
     background: none;
+    cursor: pointer;
   }
 
   #slide-in-menu {
+    display: block;
+
     height: 100%;
     width: 600px;
 
     padding: 40px;
 
     position: fixed;
+    z-index: 1;
 
     top: 80px;
     right: -600px;
@@ -582,6 +619,11 @@ hr {
   #slide-in-sections > span {
     margin-bottom: 40px;
     cursor: pointer;
+  }
+
+  #location {
+    margin-top: 20px;
+    justify-content: flex-start;
   }
 
   .card-text > h1,
