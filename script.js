@@ -31,7 +31,7 @@ function showMenu() {
 }
 
 function closeMenu() {
-  menu.style.right = '-600px';
+  menu.style.right = '-100%';
   body.style.overflow = 'visible';
   overlay.style.opacity = '0';
   setTimeout(() => {

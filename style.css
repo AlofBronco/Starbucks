@@ -515,11 +515,30 @@ hr {
   .special-card > h2 {
     font-size: 1.1rem;
   }
+
+  .special-card > button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (max-width: 1020px) {
   header {
     height: 80px;
+  }
+
+  .card-text > h1,
+  .card-text > h2 {
+    width: 320px;
+  }
+
+  .card-text > h2 {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .special-card > h2 {
+    font-size: 1.1rem;
   }
 
   article {
@@ -593,7 +612,7 @@ hr {
     display: block;
 
     height: 100%;
-    width: 600px;
+    width: 80%;
 
     padding: 40px;
 
@@ -601,7 +620,7 @@ hr {
     z-index: 1;
 
     top: 80px;
-    right: -600px;
+    right: -100%;
 
     background-color: #fff;
 
@@ -626,21 +645,62 @@ hr {
     justify-content: flex-start;
   }
 
-  .card-text > h1,
-  .card-text > h2 {
-    width: 320px;
-  }
-
-  .card-text > h2 {
-    font-size: 1.1rem;
-    line-height: 1.8;
-  }
-
   .card {
     height: 320px;
   }
+}
 
-  .special-card > h2 {
-    font-size: 1.1rem;
+@media screen and (max-width: 700px) {
+  .card {
+    flex-direction: column;
+  }
+
+  #card-3,
+  #card-6,
+  .card {
+    height: auto;
+  }
+
+  #card-1,
+  #card-3,
+  #card-5 {
+    flex-direction: column;
+  }
+
+  .card-text {
+    width: 93%;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .card-text > h1,
+  .card-text > h2 {
+    width: 100%;
+  }
+
+  .card-text > h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .card-text > h1 {
+    font-size: 1.9rem;
+  }
+
+  .card-text > h2 {
+    font-size: 1.2rem;
+  }
+
+  .sign-in {
+    margin-bottom: 10px;
+  }
+
+  #social-media {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 0 20px;
   }
 }
